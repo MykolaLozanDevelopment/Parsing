@@ -23,7 +23,10 @@ def writer(parametr):
 
     book.close()
 
-if array != None:
-    writer(array)
+if __name__ == '__main__':
+    if array != None:
+        writer(array)
+
+
 
 
