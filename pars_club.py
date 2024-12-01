@@ -8,10 +8,10 @@ headers = {
 
 def download(url):
     response = requests.get(url, stream=True)
-    r = open("C:\\GITHUB\\Parsing\\image\\" + url.split("/")[-1], "wb")
-    for value in response.iter_content(1024 * 1024):
-        r.write(value)
-    r.close()
+    with open("C:\\GITHUB\\Parsing\\image\\" + url.split("/")[-1], "wb") as r:
+        for value in response.iter_content(1024 * 1024):
+            r.write(value)
+        
 
 
 def get_url():
